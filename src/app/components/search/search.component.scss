@@ -8,9 +8,9 @@
 }
 
 .search,
-.search_imput {
+.search_input {
   position: relative;
-  width: 100%;
+  width: 90%;
   height: 40px;
   border: 0;
   border-radius: 25px;
@@ -23,7 +23,8 @@
   outline: none;
 }
 
-.search_imput {
+input {
+  margin-left: -15px;
 }
 
 
