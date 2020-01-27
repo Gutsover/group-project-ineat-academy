@@ -1,0 +1,23 @@
+.container-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  box-sizing: border-box;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1001;
+  top: 0;
+  min-height: 72px;
+  width: 100vw;
+  background-color: #fff;
+  transition: all 0.1s ease-out;
+  padding: 16px 64px;
+  white-space: nowrap;
+}
+.container-header .logo {
+  max-width: 240px;
+}
+.container-header .top-nav_actions {
+  display: flex;
+  flex-direction: row;
+}

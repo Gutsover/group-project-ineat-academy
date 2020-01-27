@@ -1,0 +1,44 @@
+.user {
+  display: flex;
+  flex-direction: row;
+  margin-left: 25px;
+}
+.user .user_account,
+.user .user_link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  margin-right: 24px;
+  transition: all 0.1s ease-out;
+}
+.user .user_link img {
+  border-radius: 50%;
+}
+.user .button.upload {
+  height: 46px;
+  padding: 0 28px;
+  border-color: #222;
+  border-radius: 25px;
+  border-width: 2px;
+  border-style: solid;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #222;
+  font-size: 16px;
+  outline: none;
+  transition: background-color 0.1s ease-out;
+  text-decoration: none;
+}
+.user .user_link:hover {
+  background-color: #0099e5;
+  fill: #fff;
+}
+.button.upload:hover {
+  background: #0099e5;
+  color: #fff;
+  border-color: #0099e5;
+}
