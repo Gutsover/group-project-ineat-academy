@@ -3,14 +3,12 @@
   min-width: 224px;
   min-height: 24px;
   margin-right: 24px;
-
-
 }
 
 .search,
-.search_imput {
+.search_input {
   position: relative;
-  width: 100%;
+  width: 90%;
   height: 40px;
   border: 0;
   border-radius: 25px;
@@ -19,10 +17,9 @@
   font-weight: normal;
   font-size: 16px;
   color: #222;
-  text-indent: 48px;
+  text-indent: 35px;
   outline: none;
 }
-
 
 .submit {
   background-image: url(https://assetcdn.500px.org/assets/search-8fe8897ae58915b80f55b3d78163cf63.svg);
