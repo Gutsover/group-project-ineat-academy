@@ -26,7 +26,7 @@
     border-width: 2px;
     border-style: solid;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     color: #222;
     font-size: 16px;
@@ -44,6 +44,7 @@
 
 .button.upload:hover {
     background: #0099e5;
-    color: #fff;
-    border-color: #0099e5;
+    color: #fff !important;
+    border-color: #0099e5 !important;
+    fill: #fff !important;
 }
