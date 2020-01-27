@@ -5,11 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { from } from 'rxjs';
 import { HeaderComponent } from '../components/header/header.component';
+import { SearchComponent } from '../components/search/search.component';
+import { UserComponent } from '../components/user/user.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    SearchComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
