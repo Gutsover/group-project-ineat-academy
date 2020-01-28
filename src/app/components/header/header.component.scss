@@ -1,4 +1,4 @@
-.container-header {
+.top-nav {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -8,8 +8,8 @@
   z-index: 1001;
   top: 0;
   min-height: 72px;
-  width: 98vw;
-  background-color:#FFF;
+  width: 100vw;
+  background-color: #FFF;
   transition: all 0.1s ease-out;
   padding: 16px 64px;
   white-space: nowrap;
@@ -18,9 +18,12 @@
     max-width: 240px;
   }
 
+  .logo img {
+    width: 100%;
+  }
+
   .top-nav_actions {
     display: flex;
     flex-direction: row;
   }
-
 }
