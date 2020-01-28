@@ -1,0 +1,43 @@
+.discovery_body_wraper {
+  background-color: #f7f8fa;
+  padding: 20px 50px;
+}
+.discovery_body {
+  display: flex;
+  flex-wrap: wrap;
+}
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.discovery_body_grid ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+li {
+  display: list-item;
+}
+.discovery_body_grid ul > li {
+  margin: 5px;
+  height: 40vh;
+  flex-grow: 1;
+}
+.discovery_body_grid ul > li:last-child {
+  flex-grow: 10;
+}
+.photo_thumbnail {
+  opacity: 1;
+  background-color: #eeeff2;
+}
+a {
+  text-decoration: none;
+  outline: none;
+}
+.discovery_body_grid li > a > img {
+  max-height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+  vertical-align: bottom;
+}
