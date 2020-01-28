@@ -1,9 +1,32 @@
 .user {
   display: flex;
   flex-direction: row;
-  margin-left: 25px;
 
-  .user_account, .user_link {
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 32px;
+    color: #222;
+    font-size: 16px;
+    outline: none;
+    padding: 0 16px;
+    transition: background-color 0.1s ease-out;
+  }
+
+  .button:hover {
+    color: #0099e5;
+  }
+
+  .button.signup {
+    border-color: #222;
+    border-radius: 16px;
+    border-width: 2px;
+    border-style: solid;
+  }
+
+  .user_account,
+  .user_link {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -14,8 +37,15 @@
     transition: all 0.1s ease-out;
   }
 
-  .user_link img {
-      border-radius: 50%;
+  .user_link:hover {
+    background-color: #0099e5;
+    fill: #fff;
+  }
+
+  .user_account img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
   }
 
   .button.upload {
@@ -25,26 +55,21 @@
     border-radius: 25px;
     border-width: 2px;
     border-style: solid;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #222;
-    font-size: 16px;
-    outline: none;
-    transition: background-color 0.1s ease-out;
-    text-decoration: none;
   }
 
-}
+  .button.upload svg {
+    margin-right: 10px;
+  }
 
-.user .user_link:hover {
-    background-color: #0099e5;
-    fill: #fff;
-}
-
-.button.upload:hover {
+  .button.upload:hover {
     background: #0099e5;
-    color: #fff !important;
-    border-color: #0099e5 !important;
-    fill: #fff !important;
+    color: #fff;
+    border-color: #0099e5;
+  }
+
+  .button.upload:hover svg {
+    stroke: #fff;
+    fill: #fff;
+    color: #fff;
+  }
 }
