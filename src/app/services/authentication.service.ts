@@ -13,6 +13,7 @@ export class AuthenticationService {
     this.afAuth.auth.signInWithEmailAndPassword('mvandaele@ineat', 'administrator');
   }
 
+  // Méthode appelée dans registerComponent.ts
   doRegister(value) {
     return new Promise<any>((resolve, reject) => {
       firebase.auth().createUserWithEmailAndPassword(value.email, value.password)
