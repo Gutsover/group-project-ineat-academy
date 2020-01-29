@@ -12,6 +12,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from '../../environments/environment';
+import { ModalConnexionComponent } from '../components/modal-connexion/modal-connexion.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { environment } from '../../environments/environment';
     HeaderComponent,
     SearchComponent,
     UserComponent,
-    ModalUploadComponent
+    ModalUploadComponent,
+    ModalConnexionComponent
   ],
   imports: [
     BrowserModule,
