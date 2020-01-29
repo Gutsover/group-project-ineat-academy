@@ -1,0 +1,31 @@
+.user {
+    display: flex;
+    flex-direction: row;
+
+    a {
+        text-decoration: none;
+    }
+
+    .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 32px;
+        color: #222;
+        font-size: 16px;
+        outline: none;
+        padding: 0 16px;
+        transition: background-color 0.1s ease-out;
+      }
+    
+      .button:hover {
+        color: #0099e5;
+      }
+    
+      .button.signup {
+        border-color: #222;
+        border-radius: 16px;
+        border-width: 2px;
+        border-style: solid;
+      }
+}
