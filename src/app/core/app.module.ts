@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { from } from 'rxjs';
 import { HeaderComponent } from '../components/header/header.component';
 import { SearchComponent } from '../components/search/search.component';
 import { UserComponent } from '../components/user/user.component';
@@ -15,6 +14,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from '../../environments/environment';
 import { ModalConnexionComponent } from '../components/modal-connexion/modal-connexion.component';
 import { RegisterComponent } from '../components/register/register.component';
+import { DatabaseService } from '../services/database/database.service';
 
 @NgModule({
   declarations: [
@@ -36,7 +36,7 @@ import { RegisterComponent } from '../components/register/register.component';
     AngularFireStorageModule,
     AngularFireAuthModule
   ],
-  providers: [],
+  providers: [ DatabaseService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
