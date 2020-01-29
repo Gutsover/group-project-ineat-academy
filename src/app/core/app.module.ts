@@ -7,6 +7,7 @@ import { from } from 'rxjs';
 import { HeaderComponent } from '../components/header/header.component';
 import { SearchComponent } from '../components/search/search.component';
 import { UserComponent } from '../components/user/user.component';
+import { ModalUploadComponent } from '../components/modal-upload/modal-upload.component';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
@@ -17,7 +18,8 @@ import { environment } from '../../environments/environment';
     AppComponent,
     HeaderComponent,
     SearchComponent,
-    UserComponent
+    UserComponent,
+    ModalUploadComponent
   ],
   imports: [
     BrowserModule,
