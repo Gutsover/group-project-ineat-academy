@@ -13,11 +13,11 @@ export class GalleryComponent implements OnInit, OnChanges {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.images);
+    // console.log(this.images);
   }
 
   ngOnChanges(){
-    console.log(this.images);
+    // console.log(this.images);
   }
 
 }
