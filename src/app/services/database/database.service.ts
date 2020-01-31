@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -10,6 +11,13 @@ export class DatabaseService {
   }
 
   getPopularPictures() {
-    return this.db.collection<any>('pictures').valueChanges();
+    return this.db.collection<any>('pictures').snapshotChanges().pipe(
+      map(pictures => pictures.map(picture => {
+        console.log(picture);
+        const data = picture.payload.doc.data();
+        const id = picture.payload.doc.id;
+        return {id, ...data};
+      }))
+    );
   } 
 }

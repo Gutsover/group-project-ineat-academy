@@ -24,7 +24,7 @@ export class HeaderComponent implements OnInit {
   }
 
   onUserLogout(event) {
-    console.log(event);
+    console.log('Header', event);
     this.userLogout.emit(event);
   }
 

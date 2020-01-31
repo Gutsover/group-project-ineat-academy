@@ -23,6 +23,12 @@ export class AppComponent implements OnInit {
     this.showLoginModal = true;
   }
 
+  async onUserLogout(event){
+    console.log('App', event);
+    await this.authService.logout();
+    this.getUser();
+  }
+
   hideLoginModal() {
     this.showLoginModal = false;
   }

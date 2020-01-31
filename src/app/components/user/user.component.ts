@@ -14,15 +14,17 @@ export class UserComponent implements OnChanges {
   @Output() userLogin = new EventEmitter<any>();
 
 
-  @Output() connexionForm = false;
+  @Output() connexionForm;
 
   constructor() { }
 
   onUserLogin() {
     this.userLogin.emit(true);
+    console.log(this.connexionForm);
   }
 
   logout() {
+    console.log('user logout');
     this.userLogout.emit(true);
   }
 

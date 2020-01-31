@@ -8,7 +8,7 @@ const routes: Routes = [
   { path: '', loadChildren: () => import ('./../home/home.module').then(mod => mod.HomeModule), },
   { path: 'upload', component: ModalUploadComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'details', component: DetailsComponent}
+  { path: 'image/:imageId', component: DetailsComponent}
 ];
 
 @NgModule({
