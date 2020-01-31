@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
@@ -18,16 +18,9 @@ export class ModalConnexionComponent implements OnInit {
 
   login() {
     this.userLogin.emit(this.profileForm.value);
-    console.log(this.profileForm.value);
   }
-
-  connectToForm() {
-    this.cancelConnexionForm.emit(true);
-  }
-
 
   ngOnInit() {
-
     this.profileForm = new FormGroup({
       email: new FormControl('', [
         Validators.required,
