@@ -9,10 +9,11 @@ export class AuthenticationService {
 
   constructor(public afAuth: AngularFireAuth) {}
 
-  login() {
-    this.afAuth.auth.signInWithEmailAndPassword('mvandaele@ineat', 'administrator');
+  login(credentials) {
+    this.afAuth.auth.signInWithEmailAndPassword(credentials.email, credentials.password);
   }
 
+  // Méthode appelée dans registerComponent.ts
   doRegister(value) {
     return new Promise<any>((resolve, reject) => {
       firebase.auth().createUserWithEmailAndPassword(value.email, value.password)

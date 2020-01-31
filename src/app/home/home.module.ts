@@ -6,6 +6,7 @@ import { HomeComponent } from './home.component';
 import { NavComponent } from './components/nav/nav.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { DatabaseService } from '../services/database/database.service';
 
 
 @NgModule({
@@ -14,6 +15,10 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
     CommonModule,
     HomeRoutingModule,
     AngularFirestoreModule
+  ],
+  providers: [
+    DatabaseService
   ]
 })
+
 export class HomeModule { }

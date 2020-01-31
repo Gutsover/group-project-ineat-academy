@@ -5,7 +5,7 @@
   <div class="top-nav_actions">
 
     <app-search></app-search>
-    <app-modal-connexion></app-modal-connexion>
+    <app-modal-connexion (userLogin)="onUserLogin($event)" *ngIf="isConnected"></app-modal-connexion>
     <app-user></app-user>
 
   </div>
