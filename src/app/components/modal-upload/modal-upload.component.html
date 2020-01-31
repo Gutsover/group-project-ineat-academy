@@ -3,22 +3,22 @@
     <div class="upload_modal_title">
       Upload new image
     </div>
-    <form method="post">
+    <form [formGroup]="uploadForm">
       <div class="upload_modal_content">
         <div class="input_wrapper">
           <label for="name">Picture's name</label>
-          <input id="name" type="text" />
+          <input id="name" type="text" formControlName="name" />
         </div>
         <div class="input_wrapper">
           <label for="name">Picture's description</label>
-          <textarea id="description" rows="8"></textarea>
+          <textarea id="description" rows="8" formControlName="description"></textarea>
         </div>
         <div class="input_wrapper">
           <label for="name">Picture's file</label>
-          <input id="name" type="file" />
+          <input id="name" type="file" (change)="onFileSeclected($event)"/>
         </div>
         <div class="actions">
-          <input class="button" type="submit" />
+          <input class="button" type="submit"(click)="onUpload()" />
         </div>
       </div>
     </form>
