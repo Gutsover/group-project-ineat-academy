@@ -33,10 +33,12 @@ import { DetailsComponent } from '../details/details.component';
     FormsModule,
     ReactiveFormsModule,
     BrowserModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase, 'ineat-project-group'),
     AngularFireStorageModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+
   ],
   providers: [ DatabaseService ],
   bootstrap: [AppComponent]
