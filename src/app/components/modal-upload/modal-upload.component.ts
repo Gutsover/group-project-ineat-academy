@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
@@ -9,7 +9,7 @@ import { FormGroup, FormControl } from '@angular/forms';
 export class ModalUploadComponent implements OnInit {
   uploadForm: FormGroup;
   selectedFile: File;
-
+ 
   constructor() {}
 
 
@@ -29,12 +29,9 @@ export class ModalUploadComponent implements OnInit {
       name: this.uploadForm.value['name'],
       description: this.uploadForm.value['description'],
       file: this.selectedFile
-    };
-
-
+    };  
     
-    
-    console.log(this.uploadForm.value);
+    console.log(data);
   }
 
 }
