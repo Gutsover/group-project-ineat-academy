@@ -9,8 +9,8 @@ export class AuthenticationService {
 
   constructor(public afAuth: AngularFireAuth) {}
 
-  login(credentials) {
-    this.afAuth.auth.signInWithEmailAndPassword(credentials.email, credentials.password);
+  async login(credentials) {
+    await this.afAuth.auth.signInWithEmailAndPassword(credentials.email, credentials.password);
   }
 
   // Méthode appelée dans registerComponent.ts
@@ -25,5 +25,9 @@ export class AuthenticationService {
 
   logout() {
     this.afAuth.auth.signOut();
+  }
+
+  getUser() {
+    return this.afAuth.auth.currentUser;
   }
 }

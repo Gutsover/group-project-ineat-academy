@@ -1,4 +1,5 @@
-<app-header></app-header>
+<app-header [user]="user" (userLogin)="onUserLogin($event)"></app-header>
 
 <router-outlet></router-outlet>
-<app-modal-upload ></app-modal-upload>
+<app-modal-connexion *ngIf="showLoginModal" (userLogin)="login($event)" (cancelConnexionForm)="hideLoginModal()"></app-modal-connexion>
+

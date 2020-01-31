@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output,EventEmitter, OnChanges } from '@angular/core';
 
 
 @Component({
@@ -6,11 +6,28 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './user.component.html',
   styleUrls: ['./user.component.scss']
 })
-export class UserComponent implements OnInit {
+export class UserComponent implements OnChanges {
+
+
+  @Input() user;
+  @Output() userLogout = new EventEmitter<any>();
+  @Output() userLogin = new EventEmitter<any>();
+
+
+  @Output() connexionForm = false;
 
   constructor() { }
 
-  ngOnInit() {
+  onUserLogin() {
+    this.userLogin.emit(true);
+  }
+
+  logout() {
+    this.userLogout.emit(true);
+  }
+
+  ngOnChanges() {
+    console.log(this.user);
   }
 
 }

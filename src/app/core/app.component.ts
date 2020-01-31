@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from '../services/authentication.service';
 
 @Component({
@@ -6,18 +6,40 @@ import { AuthenticationService } from '../services/authentication.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  showLoginModal: boolean;
+  user;
  
   constructor(private authService : AuthenticationService) {
 
   }
 
+  ngOnInit() {
+    this.showLoginModal = false;
+    this.getUser();
+  }
+
   onUserLogin(event) {
-    console.log(event);
+    this.showLoginModal = true;
+  }
+
+  hideLoginModal() {
+    this.showLoginModal = false;
+  }
+
+  async login(event) {
     const credentials = {
       email: event.email,
       password: event.password
     };
-    this.authService.login(credentials);
+    await this.authService.login(credentials);
+    this.getUser();
+    this.hideLoginModal();
   }
+
+  getUser() {
+    this.user = this.authService.getUser();
+  }
+
+  
 }

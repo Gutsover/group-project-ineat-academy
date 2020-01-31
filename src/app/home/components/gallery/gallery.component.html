@@ -3,7 +3,7 @@
         <div class="discovery_body_grid">
             <ul>
                 <li *ngFor="let image of images" class="photo_thumbnail">
-                    <a href>
+                    <a routerLink="/details" routerLinkActive="active">
                         <img src="{{image.likes.src}}" alt="{{image.likes.title}}" loading="lazy">
                     </a>
                 </li>

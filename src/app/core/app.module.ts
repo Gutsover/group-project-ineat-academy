@@ -15,6 +15,7 @@ import { environment } from '../../environments/environment';
 import { ModalConnexionComponent } from '../components/modal-connexion/modal-connexion.component';
 import { RegisterComponent } from '../components/register/register.component';
 import { DatabaseService } from '../services/database/database.service';
+import { DetailsComponent } from '../details/details.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { DatabaseService } from '../services/database/database.service';
     UserComponent,
     ModalUploadComponent,
     ModalConnexionComponent,
-    RegisterComponent
+    RegisterComponent, 
+    DetailsComponent
   ],
   imports: [
     FormsModule,
