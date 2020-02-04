@@ -6,10 +6,11 @@ import { DetailsComponent } from './details.component';
 import { DatabaseService } from '../services/database/database.service';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { ViewerComponent } from './component/viewer/viewer.component';
+import { CommentComponent } from './component/comment/comment.component';
 
 
 @NgModule({
-  declarations: [DetailsComponent, ViewerComponent],
+  declarations: [DetailsComponent, ViewerComponent, CommentComponent],
   imports: [
     CommonModule,
     DetailsRoutingModule,
