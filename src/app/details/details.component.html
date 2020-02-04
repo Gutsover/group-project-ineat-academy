@@ -1,2 +1,6 @@
     <app-viewer [image]="image$ | async"></app-viewer>
-    <!-- <app-details-comments [comments]="comments$ | async"></app-details-comments> -->
+
+    <div class="content">
+      <app-comment [comments]="comments$ | async"></app-comment>
+      
+    </div>

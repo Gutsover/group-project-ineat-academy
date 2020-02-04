@@ -1,0 +1,15 @@
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: calc(100vw - 250px);
+    margin: 0 auto;
+    padding: 2rem 0 0 0;
+  }
+//   .content .infos {
+//     width: 40%;
+//   }
+//   .content .comments {
+//     width: 55%;
+//   }
