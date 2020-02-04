@@ -27,4 +27,5 @@ export class DatabaseService {
   getCommentsByPictureId(pictureId) {
     return this.db.collection<any>('comments', ref => ref.where('pictureId', '==', pictureId)).valueChanges()
   }
+
 }

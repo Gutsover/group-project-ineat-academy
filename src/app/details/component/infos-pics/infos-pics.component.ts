@@ -8,7 +8,11 @@ import { Component, Input } from '@angular/core';
 
 export class InfosPicsComponent {
 
-  @Input() picture;
+  @Input() image;
 
   constructor() { }
+
+  ngOnChanges(){
+    console.log(this.image);
+  }
 }
