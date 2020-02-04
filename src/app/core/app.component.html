@@ -3,4 +3,4 @@
 <router-outlet></router-outlet>
 <app-modal-connexion *ngIf="showLoginModal" (userLogin)="login($event)" (cancelConnexionForm)="hideLoginModal()"></app-modal-connexion>
 
-<!-- <app-modal-upload></app-modal-upload> -->
+<app-modal-upload *ngIf="showUploadModal"></app-modal-upload>
