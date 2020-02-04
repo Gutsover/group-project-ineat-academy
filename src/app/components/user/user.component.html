@@ -51,7 +51,7 @@
   <div class="user" *ngIf="!connexionForm">
   <!-- <div class="user" *ngIf="!connexionForm; else showModal"> -->
     <a class="signin button" (click)="onUserLogin()">Se connecter</a>
-    <a class="signup button">Créer un compte</a>
+    <a class="signup button" (click)="onUserRegister()">Créer un compte</a>
   </div>
   <!-- <ng-template #showModal>
     <div class="user">
@@ -60,4 +60,3 @@
       <a class="signup button">Créer un compte</a>
     </div>
   </ng-template> -->
-</ng-template>
