@@ -13,11 +13,14 @@ export class DatabaseService {
   getPopularPictures() {
     return this.db.collection<any>('pictures').snapshotChanges().pipe(
       map(pictures => pictures.map(picture => {
-        console.log(picture);
         const data = picture.payload.doc.data();
         const id = picture.payload.doc.id;
         return {id, ...data};
       }))
     );
   } 
+
+  getPictureById(documentId){
+    return this.db.doc('pictures/' + documentId).valueChanges();
+  }
 }
