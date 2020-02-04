@@ -5,10 +5,8 @@ import { RegisterComponent } from './../components/register/register.component';
 import { DetailsComponent } from '../details/details.component';
 
 const routes: Routes = [
-  { path: '', loadChildren: () => import ('./../home/home.module').then(mod => mod.HomeModule), },
-  { path: 'upload', component: ModalUploadComponent },
-  { path: 'register', component: RegisterComponent },
-  { path: 'image/:imageId', component: DetailsComponent}
+  { path: '', loadChildren: () => import ('../home/home.module').then(mod => mod.HomeModule), },
+  { path: 'image/:imageId', loadChildren: () => import('../details/details.module').then(mod => mod.DetailsModule)}
 ];
 
 @NgModule({
