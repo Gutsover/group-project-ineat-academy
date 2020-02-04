@@ -8,6 +8,7 @@ import { AuthenticationService } from '../services/authentication.service';
 })
 export class AppComponent implements OnInit {
   showLoginModal: boolean;
+  showUploadModal: boolean;
   user;
  
   constructor(private authService : AuthenticationService) {
@@ -16,6 +17,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.showLoginModal = false;
+    this.showUploadModal = false;
     this.getUser();
   }
 
