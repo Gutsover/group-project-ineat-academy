@@ -1,1 +1,11 @@
-<app-viewer [image]="image$ | async"></app-viewer>
+<div class="viewer">
+  <div class="viewer_close" [routerLink]="['/']">
+    <span></span>
+  </div>
+  <div class="viewer_image">
+    <app-viewer [image]="image$ | async"></app-viewer>
+  </div>
+</div>
+<div class="content">
+  <!-- <app-details-comments [comments]="comments$ | async"></app-details-comments> -->
+</div>

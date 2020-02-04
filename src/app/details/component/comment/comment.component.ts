@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { DatabaseService } from '../../../services/database/database.service';
+import { ActivatedRoute } from '@angular/router';
+
 
 @Component({
   selector: 'app-comment',
@@ -7,9 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CommentComponent implements OnInit {
 
-  constructor() { }
+  @Input() comments: any;
+  commentsArray;
 
-  ngOnInit() {
+
+  constructor(private route: ActivatedRoute, private service: DatabaseService) { }
+
+  ngOnInit() {}
+
+  ngOnChanges(): void {
+    this.commentsArray = this.comments ? this.comments[0].comments : [];
   }
 
 }

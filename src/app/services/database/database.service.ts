@@ -23,4 +23,8 @@ export class DatabaseService {
   getPictureById(documentId){
     return this.db.doc('pictures/' + documentId).valueChanges();
   }
+
+  getCommentsByPictureId(pictureId: string) {
+    return this.db.collection<any>('comments', ref => ref.where('pictureId', '==', pictureId)).valueChanges();
+  }
 }
