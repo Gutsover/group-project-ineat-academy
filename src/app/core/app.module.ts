@@ -15,7 +15,7 @@ import { environment } from '../../environments/environment';
 import { ModalConnexionComponent } from '../components/modal-connexion/modal-connexion.component';
 import { RegisterComponent } from '../components/register/register.component';
 import { DatabaseService } from '../services/database/database.service';
-import { DetailsComponent } from '../details/details.component';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [
@@ -26,8 +26,7 @@ import { DetailsComponent } from '../details/details.component';
     UserComponent,
     ModalUploadComponent,
     ModalConnexionComponent,
-    RegisterComponent, 
-    DetailsComponent
+    RegisterComponent
   ],
   imports: [
     FormsModule,
@@ -38,7 +37,7 @@ import { DetailsComponent } from '../details/details.component';
     AngularFireModule.initializeApp(environment.firebase, 'ineat-project-group'),
     AngularFireStorageModule,
     AngularFireAuthModule,
-
+    AngularFirestoreModule
   ],
   providers: [ DatabaseService ],
   bootstrap: [AppComponent]

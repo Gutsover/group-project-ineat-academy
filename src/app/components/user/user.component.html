@@ -33,7 +33,7 @@
       ></path>
     </svg>
   </a>
-  <a class="upload button">
+  <a class="upload button" >
     <svg
       width="16"
       height="16"
@@ -48,14 +48,15 @@
   </a>
 </div>
 <ng-template #showLogin>
-  <div class="user" *ngIf="!connexionForm; else showModal">
+  <div class="user" *ngIf="!connexionForm">
+  <!-- <div class="user" *ngIf="!connexionForm; else showModal"> -->
     <a class="signin button" (click)="onUserLogin()">Se connecter</a>
-    <a class="signup button">Créer un compte</a>
+    <a class="signup button" (click)="onUserRegister()">Créer un compte</a>
   </div>
-  <ng-template #showModal>
+  <!-- <ng-template #showModal>
     <div class="user">
+      <p>Je suis connecté, je suis un boss</p>
       <a class="signin button" (click)="connectToForm()">Se connecter</a>
       <a class="signup button">Créer un compte</a>
     </div>
-  </ng-template>
-</ng-template>
+  </ng-template> -->

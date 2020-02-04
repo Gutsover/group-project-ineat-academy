@@ -1,0 +1,8 @@
+<div class="viewer">
+    <div class="viewer_close" [routerLink]="['/']">
+        <span></span>
+    </div>
+    <div class="viewer_image">
+        <img *ngIf="image" [src]="image.src" [alt]="image.title" />
+    </div>
+</div>

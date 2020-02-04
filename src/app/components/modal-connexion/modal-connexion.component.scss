@@ -1,4 +1,4 @@
-.upload_modal_wrapper {
+.connexion_modal_wrapper {
   position: fixed;
   display: flex;
   justify-content: center;
@@ -10,14 +10,14 @@
   right: 0;
 }
 
-.upload_modal_wrapper .upload_modal {
+.connexion_modal_wrapper .connexion_modal {
   width: 450px;
   height: 550px;
   background: #f7f8fa;
   position: relative;
 }
 
-.upload_modal_wrapper .upload_modal_title {
+.connexion_modal_wrapper .connexion_modal_title {
   width: 100%;
   text-align: center;
   box-sizing: border-box;
@@ -26,27 +26,27 @@
   background: #fff;
 }
 
-.upload_modal_wrapper .upload_modal_content {
+.connexion_modal_wrapper .connexion_modal_content {
   padding: 20px;
   box-sizing: border-box;
 }
 
-.upload_modal_wrapper .upload_modal_content .alert {
+.connexion_modal_wrapper .connexion_modal_content .alert {
   margin: 5px 0 0 5px;
   color: #d3540090;
 }
 
-.upload_modal_wrapper .upload_modal_content .input_wrapper {
+.connexion_modal_wrapper .connexion_modal_content .input_wrapper {
   padding: 20;
   margin-bottom: 20px;
 }
 
-.upload_modal_wrapper .upload_modal_content .input_wrapper label {
+.connexion_modal_wrapper .connexion_modal_content .input_wrapper label {
   display: inline-block;
   margin-bottom: .5rem;
 }
 
-.upload_modal_wrapper .upload_modal_content .input_wrapper input, .upload_modal_wrapper .upload_modal_content .input_wrapper textarea {
+.connexion_modal_wrapper .connexion_modal_content .input_wrapper input, .connexion_modal_wrapper .connexion_modal_content .input_wrapper textarea {
   display: block;
   width: 100%;
   box-sizing: border-box;
@@ -62,7 +62,7 @@
   transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
-::-webkit-file-upload-button {
+::-webkit-file-connexion-button {
   background: #dedede;
   border-radius: 10px;
   color: #666;
@@ -71,7 +71,7 @@
   padding: 8px;
 }
 
-.upload_modal_wrapper .upload_modal_content .actions {
+.connexion_modal_wrapper .connexion_modal_content .actions {
   position: absolute;
   box-sizing: border-box;
   bottom: 10px;
@@ -83,7 +83,7 @@
   justify-content: space-around;
 }
 
-.upload_modal_wrapper .upload_modal_content .actions .button {
+.connexion_modal_wrapper .connexion_modal_content .actions .button {
   cursor: pointer;
   width: 153px;
   height: 48px;
@@ -98,11 +98,11 @@
   border: none;
 }
 
-.upload_modal_wrapper .upload_modal_content .actions .button.valider {
+.connexion_modal_wrapper .connexion_modal_content .actions .button.valider {
   background: #16a08590;
 }
 
-.upload_modal_wrapper .upload_modal_content .actions .button.cancel {
+.connexion_modal_wrapper .connexion_modal_content .actions .button.cancel {
   background: #d3540090;
 }
 
