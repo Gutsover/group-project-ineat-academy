@@ -9,7 +9,8 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 export class ModalConnexionComponent implements OnInit {
 
   constructor() { }
-
+  profileForm: FormGroup;
+  
   ngOnInit() {
     this.profileForm = new FormGroup({
       email: new FormControl('', [
@@ -28,7 +29,7 @@ export class ModalConnexionComponent implements OnInit {
 
   @Output() cancelConnexionForm = new EventEmitter<any>();
 
-  profileForm: FormGroup;
+  
 
   login() {
     this.userLogin.emit(this.profileForm.value);

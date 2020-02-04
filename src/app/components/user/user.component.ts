@@ -12,8 +12,7 @@ export class UserComponent implements OnChanges {
   @Input() user;
   @Output() userLogout = new EventEmitter<any>();
   @Output() userLogin = new EventEmitter<any>();
-
-
+  @Output() userRegister = new EventEmitter<any>();
   @Output() connexionForm;
 
   constructor() { }
@@ -26,6 +25,11 @@ export class UserComponent implements OnChanges {
   logout() {
     console.log('user logout');
     this.userLogout.emit(true);
+  }
+
+  onUserRegister() {
+    this.userRegister.emit(true);
+    console.log("je veux créer un compte!!!");
   }
 
   ngOnChanges() {
