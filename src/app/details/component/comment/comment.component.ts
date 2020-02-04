@@ -1,18 +1,14 @@
-import { Component, Input, OnChanges } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-comment',
   templateUrl: './comment.component.html',
   styleUrls: ['./comment.component.scss']
 })
-export class CommentComponent implements OnChanges {
+export class CommentComponent{
   
   @Input() comments;
 
   constructor () { }
-
-  ngOnChanges() {
-    console.log(this.comments);    
-  }
 
 }
