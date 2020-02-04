@@ -10,6 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class DetailsComponent implements OnInit {
   image$: Observable<any>;
+  comments$: Observable<any[]>;
   imageId: string;
 
   constructor(private dataService: DatabaseService, private route: ActivatedRoute) { }
@@ -17,6 +18,7 @@ export class DetailsComponent implements OnInit {
   ngOnInit() {
     this.imageId = this.route.snapshot.paramMap.get('imageId');
     this.image$ = this.dataService.getPictureById(this.imageId);
+    this.comments$ = this.dataService.getCommentsByPictureId(this.imageId);
   }
 
 }

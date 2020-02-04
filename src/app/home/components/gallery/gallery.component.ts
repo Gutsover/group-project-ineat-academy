@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, OnChanges } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-gallery',
@@ -6,18 +6,13 @@ import { Component, OnInit, Input, OnChanges } from '@angular/core';
   styleUrls: ['./gallery.component.scss']
 })
 
-export class GalleryComponent implements OnInit, OnChanges {
+export class GalleryComponent implements OnInit {
 
   @Input() images;
 
   constructor() { }
 
   ngOnInit() {
-    // console.log(this.images);
-  }
-
-  ngOnChanges(){
-    // console.log(this.images);
   }
 
 }

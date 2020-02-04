@@ -7,7 +7,7 @@ import { map } from 'rxjs/operators';
 })
 export class DatabaseService {
 
-  constructor(private db :AngularFirestore) {
+  constructor(private db: AngularFirestore) {
   }
 
   getPopularPictures() {
@@ -15,16 +15,16 @@ export class DatabaseService {
       map(pictures => pictures.map(picture => {
         const data = picture.payload.doc.data();
         const id = picture.payload.doc.id;
-        return {id, ...data};
+        return { id, ...data };
       }))
     );
-  } 
+  }
 
-  getPictureById(documentId){
+  getPictureById(documentId) {
     return this.db.doc('pictures/' + documentId).valueChanges();
   }
 
-  getCommentsByPictureId(pictureId: string) {
-    return this.db.collection<any>('comments', ref => ref.where('pictureId', '==', pictureId)).valueChanges();
+  getCommentsByPictureId(pictureId) {
+    return this.db.collection<any>('comments', ref => ref.where('pictureId', '==', pictureId)).valueChanges()
   }
 }

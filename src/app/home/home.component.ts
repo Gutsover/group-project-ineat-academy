@@ -17,15 +17,4 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.images$ = this.dataService.getPopularPictures();
   }
-  /*
-   private imageCollection: AngularFirestoreCollection<any>;
-   
-   
-   
-   ngOnInit() {
-     this.imageCollection = this.db.collection<any>('pictures');
-     this.images = this.imageCollection.valueChanges();
-    //  this.images.subscribe((data) => {console.log(data)});
-  }
-   */
 }
